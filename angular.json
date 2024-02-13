@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "bd7a21a5-fa9d-4569-8ccc-0f231fb90cb8"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DiaryApp": {
+    "Hello-World": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
