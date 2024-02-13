@@ -1,0 +1,77 @@
+
+::placeholder{
+	color: black;
+	font-size: 14px;
+	font-weight: 100;
+	opacity: 1;
+}
+.outer{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: rgba(0, 60, 128, 0.4);
+}
+.title
+{
+	color: rgb(26, 52, 172);
+	font-size: 50px;
+	font-family: Roboto;
+	font-weight: 560;
+	margin: 0;
+	padding: 0;
+}
+.intro
+{
+	color: black;
+	font-size: 21px;
+	padding-top: 25px;
+	font-family: Roboto;
+	font-weight: 560;
+}
+.inner{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 350px;
+	height: auto;
+	padding: 20px;
+	padding-top: 0;
+	background-color: whitesmoke;
+	border-radius: 10px;
+	margin: 0;
+
+}
+.text{
+	margin: 0;
+	width: 348px;
+}
+
+.btn{
+	// background-color: rgba(0, 60, 128, 1);
+	text-align: center;
+	color: white;
+	border: none;
+	width: 348px;
+	padding: 4px;
+	cursor: grab;
+	font-size:17px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 15px;
+	margin: 0;
+}
+.btn:hover , .input:hover{
+	color: white;
+	box-shadow: 0 15px 16px 0 rgba(0,0,0,0.24);
+}
+.tablinks
+{
+	padding: 10px;
+	margin: 0;
+	width: 174px;
+}
+

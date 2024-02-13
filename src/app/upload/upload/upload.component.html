@@ -1,0 +1,11 @@
+        
+    <div>
+        <h2>UPLOAD PHOTO: </h2>
+		<label for="img">Select image</label>
+        <br>
+		<input id="image" type="file" name="image" (change)="loadFile($event)" accept="image/*">
+        <img id="preview" [src]="imageSrc" style="width: 300px; height: 300px;" />
+        <div style="white-space: pre;font-size: 17px;margin: 10px;">{{properties}}</div>
+    </div>
+        
+		

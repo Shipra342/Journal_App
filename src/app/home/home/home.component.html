@@ -1,0 +1,86 @@
+<div class="outer">
+    <div class="left">
+
+        <div class="header">
+            <img src="./../../../assets/0.jpg" class="img">
+        </div>
+        <div class="menu-list">
+            <mat-accordion>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="./../../../assets/9.jpg" class="icons">
+                            Create New Diary
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button mat-button color="basic" class="btn">Type your name and age</button>
+                    <button mat-button color="basic" class="btn">de Finibus Bonorum</button>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="./../../../assets/10.jpg" class="icons">
+                            Set Reminder
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button mat-button color="basic" class="btn">Malorum</button>
+                    <button mat-button color="basic" class="btn">Sed ut perspiciatis</button>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="./../../../assets/11.jpg" class="icons">
+                            View/Edit your Notes
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button mat-button color="basic" class="btn">dicta sunt explicabo</button>
+                    <button mat-button color="basic" class="btn"> illum qui</button>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="./../../../assets/12.jpg" class="icons">
+                            Delete Your Notes
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button mat-button color="basic" class="btn">reprehenderit qui </button>
+                    <button mat-button color="basic" class="btn">ea voluptate</button>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+
+    </div>
+    <div class="right">
+        <mat-toolbar color="primary" class="tool1">
+            <div class="toolBtn">
+                <button mat-button color="basic" class ="btnRoute" (click)="onTab('DialogsList')">My Notes</button>
+                <button mat-button color="basic" class ="btnRoute" (click)="onTab('training')">Training</button>
+                <button mat-button color="basic" class ="btnRoute" (click)="onTab('offers')">My Offers</button>
+                <button mat-button color="basic" class ="btnRoute" (click)="onTab('products')">My Products</button>
+                <!-- <button mat-button color="basic" class ="btnRoute" (click)="onTab('upload')">Upload</button> -->
+                <!-- <button mat-button color="basic" class ="btnRoute" (click)="onTab('dragAndDrop')">Drag and Drop</button> -->
+            </div>
+            <div class="icon">
+                <div class="img1Div">
+                    <img src="./../../../assets/person1.png" class="img1">
+                </div>
+                <div style="font-size: medium;">UIKreative</div>
+                <!-- <span class="span" style="margin: 0px 10px 0px;"><img src="./../../../assets/14.jpg"></span>
+                <span class="span" style="margin: 0px 10px 0px;"><img src="./../../../assets/15.jpg"></span> -->
+                <a class="span" href="login"><span class="material-icons" style="font-size: 30px; color: white;">logout</span></a>
+                <a class="spanCart"><span class="material-icons" (click)="onTab('wishlist')" style="font-size: 30px;color: white;">favorite_border</span></a>
+                <span class="wishListValue" style="background: transparent; color: white;">{{wishlistItems.length}}</span>
+                <a class="spanCart"><span class="material-icons" style="color: white;"
+                        (click)="onTab('cart')">shopping_cart</span></a>
+                <span class="cartValue" style="background: transparent; color: white;">{{sum}}</span>
+            </div>
+        </mat-toolbar>
+        <mat-toolbar style="display: flex; justify-content: space-between;">
+            <span>Elite Insider Fast-</span>
+            <button mat-button (click)="openDialog()" class="create">Create New Diary</button>
+        </mat-toolbar>
+        <div class="rest-right">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

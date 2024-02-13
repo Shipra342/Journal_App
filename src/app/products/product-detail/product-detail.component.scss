@@ -1,0 +1,48 @@
+.cart
+{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: auto;
+    padding: 11px;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.img
+{
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+}
+.title, .price
+{
+    color: black;
+    font-size: 22px;
+}
+.ul > li
+{
+    font-size: 18px;
+    padding: 6px;
+}
+.rating
+{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: 6%;
+    height: 6%;
+    font-size: medium;
+    padding: 8px;
+}
+.back
+{
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+}
+.back :hover
+{
+    cursor: pointer;
+}

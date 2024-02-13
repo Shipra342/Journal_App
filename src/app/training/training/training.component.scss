@@ -1,0 +1,30 @@
+.menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.left
+{
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    background-color: rgb(142, 176, 214);
+    box-sizing: border-box;
+    align-items: center;
+    
+}
+.panel
+{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+}
+.mat-expansion-panel-header-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.p
+{
+    font-size: 17px;
+    color:darkslateblue ;
+}

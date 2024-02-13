@@ -1,0 +1,25 @@
+<div class="show">
+    <div class="rRightInner" *ngFor="let item of diaries" (click)="openTab(item)">
+        <div class="heart">
+            <div>
+                <span class="material-icons" (click)="addToWishist(item); $event.stopPropagation();"
+                    *ngIf="item.wishList == 0">favorite_border</span>
+                <span class="material-icons" style="color: red;" *ngIf="item.wishList > 0">favorite</span>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="img" style="display: flex;">
+            <img src="{{item.url}}" class="inImg">
+        </div>
+        <div class="title">
+            <p style="font-family: Roboto-Regular;" class="titleP">{{item.title}}</p>
+        </div>
+        <div class="price" style="font-family: Roboto-Regular;">{{item.price}}</div>
+        <div><button mat-button color="basic" class="btn" (click)="addToCartdsc(item); $event.stopPropagation();" *ngIf="item.quantity == 0">Add to
+                cart</button>
+            <button mat-button color="basic" class="btn" routerLink="/home/cart" *ngIf="item.quantity > 0">Go to
+                cart</button>
+        </div>
+    </div>
+</div>

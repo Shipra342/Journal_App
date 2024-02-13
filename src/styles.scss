@@ -1,0 +1,27 @@
+
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+}
+.mat-toolbar.mat-primary {
+    background: #4B9CD3;
+    color: #fff;
+  }
+::-webkit-scrollbar {
+    display: none;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0;
+}
+
+.mat-form-field-wrapper {
+    padding: 0;
+}
+.mat-form-field-wrapper {
+    padding: 0;
+}

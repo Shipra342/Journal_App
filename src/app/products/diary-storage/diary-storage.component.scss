@@ -1,0 +1,73 @@
+.show{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.rRightInner
+{
+    width: 200px;
+    height: 280px;
+    margin: 20px;
+    padding: 13px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid lightgrey;
+    border-radius: 20px;
+}
+.rRightInner:hover
+{
+    box-shadow: 7px 7px 7px gray;
+    cursor: pointer;
+}
+
+.inImg
+{
+    width: 130px;
+    height: 130px;
+    
+}
+.heart
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title
+{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.titleP{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.price
+{
+    font-size: 18px;
+    font-weight: normal;
+    
+}
+
+.btn
+{
+    border: none;
+    background-color: #4B9CD3;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+.btn:hover{
+    box-shadow: 5px 5px 5px gray;
+    color: white;
+    cursor: pointer;
+}
+.price, .title
+{
+  text-align-last: center;
+}

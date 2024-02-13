@@ -1,0 +1,19 @@
+<div class="box-outer">
+    <div class="img">
+        <img src="{{textabc.url}}" class="inImg">
+    </div>
+    <div class="bold">
+        <p style="font-family: Roboto-Regular;">{{textabc.title}}</p>
+    </div>
+    <div class="para" style="font-family: Roboto-Regular;">
+        {{textabc.content}}
+    </div>
+    <div class="lastLine">
+        <button class="iconBtn" mat-button (click)="openDialog()"><span class="material-icons">edit</span></button>
+        <div>
+            <mat-label>{{textabc.date}}</mat-label>
+        </div>
+        <button class="iconBtn" mat-button (click)="deleteItem()"><span class="material-icons">delete</span></button>
+    </div>
+
+</div>

@@ -1,0 +1,33 @@
+<div *ngIf="productDetails" class="cart">
+   <div><img src="{{productDetails.url}}" class="img"></div>
+   <div style="display: flex; flex-direction: column; padding: 10px; margin-top: 10px;">
+      <div class="back"><span class="material-icons" (click)="goBack()">arrow_back</span></div>
+      <div class="title" style="font-weight: bold;">{{productDetails.title}}</div>
+      <div style="padding: 20px; height: 40vh;">
+         <div style="font-weight: 550; font-size: 20px;">About this item</div>
+         <ul class="ul">
+            <li>The series comes in both lay flat and spiral binding with single subject and 6 subject
+               options
+            </li>
+            <li>Available in attractive cover designs</li>
+            <li>The cover design of the notebook is subject to change, it depends on stock availability</li>
+            <li>Country of Origin: India</li>
+            <li>Notebook consists of high quality papers</li>
+         </ul>
+         <div class="rating">3.4</div>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 16px;">
+            <div class="price" style="font-weight: 550;">Price: {{productDetails.price}}</div>
+         </div>
+         <div>
+            <button mat-stroked-button *ngIf="productDetails.quantity == 0">
+               <span class="material-icons" (click)="addToCart(productDetails)">add_shopping_cart</span>
+            </button>
+            <button mat-stroked-button disabled="true" *ngIf="productDetails.quantity > 0">
+               <span class="material-icons">add_shopping_cart</span>
+            </button>
+         </div>
+      </div>
+   </div>
+</div>

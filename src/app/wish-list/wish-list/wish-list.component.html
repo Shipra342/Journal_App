@@ -1,0 +1,39 @@
+<div style="display: flex; flex-direction: row;margin: 5px;">
+    <div *ngIf="wishListItems.length > 0" >
+        <div class="cart" *ngFor="let item of wishListItems" (click)="openTab(item)">
+            <div style="width: 20%; height: 100%;"><img src="{{item.url}}" class="img"></div>
+            <div style="display: flex; flex-direction: column; padding: 10px;justify-content: space-between;">
+                <div style="display: flex;flex-direction: row; justify-content: space-between;">
+                    <div class="title" style="font-weight: bold;">{{item.title}}</div>
+                    <div>
+                        <button mat-stroked-button *ngIf="item.quantity == 0">
+                            <span class="material-icons" (click)="addToCart(item); $event.stopPropagation();">add_shopping_cart</span>
+                        </button>
+                        <button mat-stroked-button disabled="true" *ngIf="item.quantity > 0">
+                            <span class="material-icons" >add_shopping_cart</span>
+                        </button>
+                    </div>
+                    
+                </div>
+
+                <div class="rating">3.4</div>
+                <div style="display: flex; flex-direction: row;justify-content: space-between; width: 30vw;">
+                    <div class="price" style="font-weight: 550;">Price: {{item.price}}</div>
+                    <div>
+                        <button class="iconBtn" mat-stroked-button (click)="deleteItem(item.key); $event.stopPropagation();"><span
+                                class="material-icons">delete</span></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="right">
+        <div class="checkout">
+            <button mat-stroked-button color="basic" style="margin-bottom: 5px;" routerLink="/home/cart">Go to
+                Cart</button><br>
+            <button mat-stroked-button color="basic" routerLink="/home/products">Shop More</button><br>
+        </div>
+
+    </div>
+</div>

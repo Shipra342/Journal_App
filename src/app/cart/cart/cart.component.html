@@ -1,0 +1,42 @@
+<div style="display: flex; flex-direction: row;margin: 5px; justify-content: space-between;">
+    <div *ngIf="cartItems.length > 0">
+        <div class="cart" *ngFor="let item of cartItems">
+            <div style="width: 20%; height: 100%;"><img src="{{item.url}}" class="img"></div>
+            <div style="display: flex; flex-direction: column; padding: 10px;">
+                <div class="title" style="font-weight: bold;">{{item.title}}</div>
+                <div style="padding: 10px;">
+                    <div style="font-weight: 550;">About this item</div>
+                    <ul>
+                        <li>The series comes in both lay flat and spiral binding with single subject and 6 subject
+                            options
+                        </li>
+                        <li>Available in attractive cover designs</li>
+                        <li>The cover design of the notebook is subject to change, it depends on stock availability</li>
+                        <li>Country of Origin: India</li>
+                        <li>Notebook consists of high quality papers</li>
+                    </ul>
+                </div>
+                <div style="display: flex; flex-direction: row;justify-content: space-between;">
+                    <div class="price" style="font-weight: 550;">Price: {{item.price}}</div>
+                    <div class="quantity" style="font-weight: 550; font-size: medium;">Quan: {{item.quantity}}</div>
+                    <div>
+                        <button class="iconBtn" mat-button (click)="minusQuantity(item.key)"><span
+                                class="material-icons">remove</span></button>
+                        <button class="iconBtn" mat-button (click)="deleteItem(item.key)"><span
+                                class="material-icons">delete</span></button>
+                        <button class="iconBtn" mat-button (click)="plusQuantity(item.key)"><span
+                                class="material-icons">add</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="checkout">
+            <button mat-stroked-button color="basic" style="margin-bottom: 5px;">Proceed to Checkout</button><br>
+            <button mat-stroked-button color="basic" routerLink="/home/products">Go back to Home</button><br>
+            <button mat-stroked-button color="basic" (click)="clearCart()">Clear Cart</button>
+        </div>
+        <div></div>
+    </div>
+</div>

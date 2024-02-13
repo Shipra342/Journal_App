@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+        <div class="text"> Diary</div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label style="color:white;">Products</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option (click)="openTab('diaries')" value="Diaries">Diaries</mat-option>
+                    <mat-option (click)="openTab('penPencils')" value="Pen Pencils">Pen/Pencils</mat-option>
+                    
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="searchDiv">
+            <mat-form-field class="search">
+                <input [(ngModel)]="mySearch" type="text" matInput placeholder="Search">
+            </mat-form-field>
+            <button mat-button color="basic" type="submit" class="searchBtn" style="color: white; background-color: transparent;"
+                (click)="searchProduct()"><span class="material-icons">search</span></button>
+        </div>
+        <div class="text">Diary</div>
+    </div>
+    <div class="showProducts">
+        <router-outlet></router-outlet>
+    </div>
+</div>

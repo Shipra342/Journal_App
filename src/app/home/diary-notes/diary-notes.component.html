@@ -1,0 +1,5 @@
+<div class="show">
+    <div class="rRightInner" *ngFor="let text of textList">
+        <app-box [textabc]="text" (editEmiter)="editItem($event)" (deleteEmiter)="deleteItem($event)" ></app-box>
+    </div>
+</div>
