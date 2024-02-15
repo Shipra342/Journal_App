@@ -26,6 +26,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "proxyConfig": "proxy.conf.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -76,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DiaryApp:build:production"
+              "browserTarget": "Hello-World:build:production"
             },
             "development": {
-              "browserTarget": "DiaryApp:build:development"
+              "browserTarget": "Hello-World:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DiaryApp:build"
+            "browserTarget": "Hello-World:build"
           }
         },
         "test": {
@@ -112,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "DiaryApp"
+  "defaultProject": "Hello-World"
 }
