@@ -1,57 +1,104 @@
 <div class="outer">
-    <div>
-        <div class="title">My Diary</div>
-        <div class="intro">Capture and collect moments to explore, relive and share your life story.</div>
+  <div>
+    <div class="title">My Diary</div>
+    <div class="intro">
+      Capture and collect moments to explore, relive and share your life story.
     </div>
-    <div class="inner">
-        <div class="tab">
-            <button mat-button color="basic" class="tablinks" (click)="onTab('signup')" style="border-right: 1px solid lightgray;">Sign Up</button>
-            <button mat-button color="basic" class="tablinks" (click)="onTab('login')">Log In</button>
-        </div>
-        <div class="content" *ngIf="currentTab == 'login'">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                
-                <mat-form-field appearance="outline" class="text">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="pat@example.com" formControlName="email">
-                    <mat-error>{{getErrorMessage()}}</mat-error>
-                </mat-form-field>
-
-
-                <mat-form-field appearance="outline" class="text">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password" formControlName="password" type="password">
-                    <mat-error>{{getErrorMessagePass()}}</mat-error>
-                </mat-form-field>
-
-                <br>
-
-                <button mat-raised-button color="primary" class="btn">Log In</button>
-
-            </form>
-        </div>
-
-        <div class="content" *ngIf="currentTab == 'signup'">
-            <form [formGroup]="signupForm" (ngSubmit)="onSubmitSignup()">
-                <mat-form-field appearance="outline" class="text">
-                    <mat-label>User Name</mat-label>
-                    <input matInput placeholder="Username">
-                </mat-form-field>
-
-                <mat-form-field appearance="outline" class="text">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Email" formControlName="email">
-                </mat-form-field>
-
-
-                <mat-form-field appearance="outline" class="text">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password" formControlName="password" type="password">
-                </mat-form-field>
-                <br>
-    
-                <button mat-raised-button color="primary" class="btn">Sign Up</button>
-            </form>
-        </div>
+  </div>
+  <div class="inner">
+    <div class="tab">
+      <button
+        mat-button
+        color="basic"
+        class="tablinks"
+        (click)="onTab('signup')"
+        style="border-right: 1px solid lightgray"
+      >
+        Sign Up
+      </button>
+      <button
+        mat-button
+        color="basic"
+        class="tablinks"
+        (click)="onTab('login')"
+      >
+        Log In
+      </button>
     </div>
+    <div class="content" *ngIf="currentTab == 'login'">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="text">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="pat@example.com"
+            formControlName="email"
+            autocomplete="off"
+          />
+          <mat-error>{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="text">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            type="password"
+            autocomplete="off"
+          />
+          <mat-error>{{ getErrorMessagePass() }}</mat-error>
+        </mat-form-field>
+
+        <br />
+
+        <button
+          mat-raised-button
+          color="primary"
+          class="btn"
+          [disabled]="!loginForm.valid"
+        >
+          Log In
+        </button>
+      </form>
+    </div>
+
+    <div class="content" *ngIf="currentTab == 'signup'">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmitSignup()">
+        <mat-form-field appearance="outline" class="text">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            placeholder="Username"
+            autocomplete="off"
+            formControlName="name"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="text">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Email"
+            formControlName="email"
+            autocomplete="off"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="text">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            type="password"
+            autocomplete="off"
+          />
+        </mat-form-field>
+        <br />
+
+        <button mat-raised-button color="primary" class="btn" [disabled]="!signupForm.valid">Sign Up</button>
+      </form>
+    </div>
+  </div>
 </div>

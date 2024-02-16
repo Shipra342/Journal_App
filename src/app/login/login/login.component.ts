@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   signupForm!: FormGroup;
   currentTab: any = 'login';
+  // complete = "";
 
   getErrorMessage() {
     return 'Not a valid email';
@@ -31,8 +32,8 @@ export class LoginComponent implements OnInit {
       ]),
     });
     this.signupForm = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
@@ -50,12 +51,15 @@ export class LoginComponent implements OnInit {
     this.apiService.getUSer(email).subscribe({
       next: (response: any) => {
         if (response) {
-          if (response.pass == pass) this.router.navigate(['/home']);
-          else alert('Email or Password does not match.');
+          if (response.pass == pass) {
+            this.router.navigate(['/home']);
+          } else alert('Email or Password does not match.');
         }
-        alert("User does not exist.\nSign up first.")
-        this.loginForm.reset();
-        this.onTab('signup');
+        else{
+          alert('User does not exist.\nSign up first.');
+          this.onTab('signup');
+          this.loginForm.reset();
+        }         
       },
       error: (error) => {
         console.error('Error:', error);
@@ -66,7 +70,6 @@ export class LoginComponent implements OnInit {
   onSubmitSignup() {
     let email = this.signupForm.value.email;
     let pass = this.signupForm.value.password;
-
 
     const postData = { email: email, pass: pass };
     this.apiService.addUser(postData).subscribe({
